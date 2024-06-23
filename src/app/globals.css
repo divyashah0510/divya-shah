@@ -5,7 +5,7 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #277a00 transparent;
+  scrollbar-color: transparent;
 }
 :root {
   --foreground-rgb: 0, 0, 0;
