@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #277a00 transparent;
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.svg-ficon:hover {
+  fill: #3b5998;
+  filter: drop-shadow(0 0 20px white);
+}
+/* Now for instagram */
+.svg-instaicon:hover {
+  fill: #c13584;
+  filter: drop-shadow(0 0 20px white);
+}
+/* Now for twiiter */
+.svg-twittericon:hover {
+  fill: #1da1f2;
+  filter: drop-shadow(0 0 20px white);
+}
+/* Now for github */
+.svg-githubicon:hover {
+  fill: indigo;
+  filter: drop-shadow(0 0 20px white);
+}
+/* Now for linkedin */
+.svg-linkedinicon:hover {
+  fill: #0a66c2;
+  filter: drop-shadow(0 0 20px white);
+}
+body {
+  overflow-x: hidden;
+}
