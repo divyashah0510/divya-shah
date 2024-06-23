@@ -11,14 +11,14 @@ import {
 import Typewriter from "typewriter-effect";
 import MetaCharacter from "@/Models/MetaCharacter";
 import Spinner from "../sub/Spinner";
-
+import { Typography } from "@material-tailwind/react";
 
 const Homepage = () => {
   const [background, setBackground] = useState(false);
   useEffect(() => {
     const timeout = setTimeout(() => {
       setBackground(true);
-    }, 5000);
+    }, 1000);
 
     return () => {
       clearTimeout(timeout);
@@ -28,15 +28,41 @@ const Homepage = () => {
   return (
     <main>
       {background ? (
-        <>
-          <section className="absolute mx-[15%] ">
+        <div className="flex px-[2%]">
+          <section className="flex flex-col my-[5%] w-full">
+            {/* @ts-ignore */}
+            <Typography as="h1" className="font-extrabold text-4xl font-playwrite mb-10">
+              Welcome to my Portfolio
+            </Typography>
+            {/* @ts-ignore */}
+            <Typography as="h2" className="text-gradient font-extrabold">
+              Full Stack Web 
+            </Typography>
+            {/* @ts-ignore */}
+            <Typography as="h2" className="text-gradient font-extrabold">
+              Developer
+            </Typography>
+            {/* @ts-ignore */}
+            <Typography as="p" className="text-3xl font-extrabold font-playwrite mt-10">
+              <Typewriter
+                options={{
+                  strings: [
+                    "I'm Divya Shah. A passionate Full Stack Web Developer from Mumbai, India.",
+                  ],
+                  autoStart: background,
+                  loop: true,
+                }}
+              />
+            </Typography>
+          </section>
+          <section className="my-[5%]">
             <Canvas
-              style={{ blockSize: "70vh", inlineSize: "43vw" }}
+              style={{ blockSize: "60vh", inlineSize: "40vw" }}
               shadows
               camera={{ position: [0, 2, 5], fov: 52 }}
               className="rounded-2xl"
             >
-              <Environment preset="dawn" />
+              <Environment preset="dawn" background />
               <mesh>
                 <torusKnotGeometry args={[1, 0.5, 128, 32]} />
                 <meshStandardMaterial
@@ -51,45 +77,8 @@ const Homepage = () => {
                 enableRotate={false}
               />
             </Canvas>
-            <div className="absolute -mt-[55%] mx-[10%]">
-              <h1
-                className={`font-black text-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2`}
-              >
-                Hi, I&apos;m{" "}
-                <span className="text-green-600 font-extrabold">Divya</span>
-              </h1>
-              <div className="text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">
-                <Typewriter
-                  options={{
-                    strings: [
-                      "I am FullStack developer devloping websites, user interfaces and web applications",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </div>
-            </div>
           </section>
-          <Canvas
-            style={{
-              blockSize: "70vh",
-              inlineSize: "25vw",
-              insetInlineStart: "60%",
-            }}
-            className="rounded-2xl"
-            shadows
-            camera={{ position: [0, 2, 5], fov: 24 }}
-          >
-            <OrbitControls enableZoom={false} enableRotate={false} />
-            <Suspense fallback={null}>
-              <group position-y={-0.9}>
-                <MetaCharacter />
-              </group>
-            </Suspense>
-            <Environment preset="sunset" />
-          </Canvas>
-        </>
+        </div>
       ) : (
         <Spinner />
       )}

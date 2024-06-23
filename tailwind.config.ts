@@ -14,6 +14,13 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
+      },
+      fontFamily: {
+        "playwrite": ['"Playwrite NG Modern"', 'sans-serif'],
+      },
+      colors: {
+        'blue-gradient': 'linear-gradient(90deg, #1e3a8a, #3b82f6)',
       },
     },
   },

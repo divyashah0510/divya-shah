@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <div id="about" className="text-center h-screen bg-white bg-opacity-30">
-        {/* <Homepage/> */}
+        <Homepage/>
       </div>
       <div id="projects" className="text-center bg-black h-screen">
         Projects
