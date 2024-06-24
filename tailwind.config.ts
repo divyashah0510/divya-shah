@@ -18,6 +18,7 @@ const config: Config = {
       },
       fontFamily: {
         "playwrite": ['"Playwrite NG Modern"', 'sans-serif'],
+        "Kanit":["Kanit", "sans-serif"],
       },
       colors: {
         'blue-gradient': 'linear-gradient(90deg, #1e3a8a, #3b82f6)',
