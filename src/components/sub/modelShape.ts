@@ -7,7 +7,7 @@ export const modelShape = [
   {
     shape: Torus,
     position: { top: "0%", left: "0%" }, // top-left corner
-    fov:42
+    fov:62
   },
   {
     shape: Icosedan,
@@ -22,7 +22,7 @@ export const modelShape = [
   {
     shape: TorusKnot,
     position: { bottom: "0%", right: "0%" }, // bottom-right corner
-    fov:52
+    fov:62
   }
 //   {
     

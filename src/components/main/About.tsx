@@ -15,8 +15,10 @@ import {
   Other_skill,
 } from "@/constants";
 import { Frames } from "@/Models/Frames";
+import { useRouter } from "next/navigation";
 
 const About = ({ images }: { images: Array<string> }) => {
+  const navigation = useRouter();
   return (
     <main className="w-full h-full flex flex-col justify-center items-center">
       <section className="w-full h-full relative">
@@ -33,7 +35,7 @@ const About = ({ images }: { images: Array<string> }) => {
             <section
               // @ts-ignore
               style={style}
-              className="xl:w-[25%] xl:h-[25%] lg:w-[20%] lg:h-[20%] md:w-[20%] md:h-[20%] sm:w-[15%] sm:h-[15%]"
+              className="xl:w-[25%] xl:h-[25%] lg:w-[20%] lg:h-[20%] md:w-[20%] md:h-[20%] sm:w-[10%] sm:h-[10%] w-[15%] h-[15%] mx-2"
               key={index}
             >
               <Canvas camera={{ position: [0, 2, 5], fov: shape.fov }}>
@@ -51,7 +53,7 @@ const About = ({ images }: { images: Array<string> }) => {
           );
         })}
       </section>
-      <div className="absolute xl:flex xl:flex-row md:flex-col justify-center items-center self-center xl:space-x-14 md:space-y-10 border-2">
+      <div className="absolute xl:flex xl:flex-row md:flex-col justify-center items-center self-center xl:space-x-14 md:space-y-10 aboutDiv">
         <section className="px-5 rounded-2xl shadow-xl">
           {/* @ts-ignore */}
           <Typography
@@ -67,7 +69,7 @@ const About = ({ images }: { images: Array<string> }) => {
           >
             My Frontend Skills
           </Typography>
-          <div className="flex flex-row space-x-5 ">
+          <div className="flex flex-row space-x-5 justify-center items-center self-center ">
             {Frontend_skill.map((skill, index) => {
               return (
                 <div
@@ -142,7 +144,7 @@ const About = ({ images }: { images: Array<string> }) => {
           >
             Currently Learning
           </Typography>
-          <div className="flex flex-row space-x-5 justify-center items-center">
+          <div className="flex flex-row space-x-5 justify-center items-center mb-16">
             {Learning_skill.map((skill, index) => {
               return (
                 <div
@@ -161,7 +163,7 @@ const About = ({ images }: { images: Array<string> }) => {
             })}
           </div>
         </section>
-        <section className="xl:w-[50vw] xl:h-[50vh] md:w-[70vw]">
+        <section className="xl:w-[50vw] xl:h-[55vh] lg:h-[55vh] md:w-[70vw] md:h-[30vh] sm:w-full">
           {/* @ts-ignore */}
           <Typography
             as="h1"
@@ -172,7 +174,7 @@ const About = ({ images }: { images: Array<string> }) => {
           <section className="w-full h-full">
             <Canvas
               className="rounded-b-2xl xl:w-full xl:h-full
-              lg:w-full lg:h-full"
+              lg:w-full lg:h-full md:h-[90%]"
               dpr={[1, 1.5]}
               camera={{ fov: 70, position: [0, 2, 15] }}
             >
@@ -201,6 +203,18 @@ const About = ({ images }: { images: Array<string> }) => {
             </Canvas>
           </section>
         </section>
+      </div>
+      <div className="w-[10%] -mt-2 mx-auto flex justify-center items-center">
+        <button
+          className="button mb-10"
+          onClick={() => {
+            navigation.push("#projects");
+          }}
+        >
+          <svg className="svgIcon" viewBox="0 0 384 512">
+            <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v306.8L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
+          </svg>
+        </button>
       </div>
     </main>
   );

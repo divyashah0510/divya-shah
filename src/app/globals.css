@@ -132,3 +132,10 @@ body {
   /* transform: translateY(-30px); */
   transition-duration: 0.6s;
 }
+
+.aboutDiv {
+  @media screen and (max-width: 1207px) {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+}

@@ -57,7 +57,7 @@ const NavbarComponent = () => {
   const navigation = useRouter();
   return (
     <nav
-      className={`mt-0 shadow-xl rounded-b-xl sticky top-0 z-[1%] bg-white bg-opacity-90 min-w-full p-2 ${
+      className={`mt-0 shadow-xl rounded-b-xl sticky top-0 z-50 bg-white bg-opacity-90 min-w-full p-2 ${
         shownavbar ? "translate-y-0" : "-translate-y-full"
       } transition-all duration-700 ease-in-out`}
     >
