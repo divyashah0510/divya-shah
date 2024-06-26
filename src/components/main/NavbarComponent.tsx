@@ -1,32 +1,53 @@
 "use client";
-import { Button, IconButton, MobileNav } from "@material-tailwind/react";
+import { Button, Collapse, IconButton } from "@material-tailwind/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const NavbarComponent = () => {
   const [openNav, setOpenNav] = useState(false);
+  const [shownavbar, setShownavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrolly = window.scrollY;
+    if (currentScrolly > lastScrollY) {
+      setShownavbar(false); // down
+    } else {
+      setShownavbar(true); // up
+    }
+    setLastScrollY(currentScrolly);
+  };
   useEffect(() => {
     window.addEventListener("resize", () => {
       window.innerWidth >= 960 && setOpenNav(false);
     });
-  }, [openNav]);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("resize", () => {
+        window.innerWidth >= 960 && setOpenNav(false);
+      });
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 justify-center items-center">
       <Link
-        className="px-5 border-2 rounded-xl hover:bg-black hover:text-white"
+        className="px-5 rounded-xl hover:bg-black transition-all duration-700 ease-in-out      hover:text-white"
         href="#about"
       >
         <li>About</li>
       </Link>
       <Link
-        className="px-5 border-2 rounded-xl hover:bg-black hover:text-white"
+        className="px-5 rounded-xl hover:bg-black transition-all duration-700 ease-in-out      
+        hover:text-white"
         href="#projects"
       >
         <li>Projects</li>
       </Link>
       <Link
-        className="px-5 border-2 rounded-xl hover:bg-black hover:text-white"
+        className="px-5 rounded-xl hover:bg-black transition-all duration-700 ease-in-out      
+        hover:text-white"
         href="#contact"
       >
         <li>Contact</li>
@@ -35,7 +56,11 @@ const NavbarComponent = () => {
   );
   const navigation = useRouter();
   return (
-    <nav className="mt-0 shadow-xl rounded-b-xl sticky top-0 z-[1%] bg-white bg-opacity-55 min-w-full p-2">
+    <nav
+      className={`mt-0 shadow-xl rounded-b-xl sticky top-0 z-[1%] bg-white bg-opacity-90 min-w-full p-2 ${
+        shownavbar ? "translate-y-0" : "-translate-y-full"
+      } transition-all duration-700 ease-in-out`}
+    >
       <section className="flex justify-center items-center bg-transparent xl:w-full lg:w-full md:w-full sm:w-full sm:justify-center sm:items-center min-w-full">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -44,6 +69,7 @@ const NavbarComponent = () => {
           className="xl:w-20 lg:w-20 md:w-20 sm:w-20 w-16 cursor-pointer"
           onClick={() => {
             navigation.push("/");
+            setOpenNav(false);
           }}
         />
         <div className="hidden lg:block xl:min-w-[80%] lg:min-w-[80%] mx-auto text-center gap-16 font-extrabold text-lg ">
@@ -53,7 +79,7 @@ const NavbarComponent = () => {
           {/* @ts-ignore */}
           <Button
             variant="gradient"
-            className="w-full rounded-3xl font-extrabold hidden lg:inline-block"
+            className="w-full -ml-5 rounded-3xl font-extrabold hidden lg:inline-block duration-700 ease-in-out hover:scale-105 hover:shadow-lg"
           >
             Resume
           </Button>
@@ -97,7 +123,7 @@ const NavbarComponent = () => {
           )}
         </IconButton>
       </section>
-      <MobileNav open={openNav}>
+      <Collapse open={openNav}>
         <div className="container mx-auto">
           <div
             onClick={() => {
@@ -113,7 +139,7 @@ const NavbarComponent = () => {
             </Button>
           </div>
         </div>
-      </MobileNav>
+      </Collapse>
     </nav>
   );
 };
