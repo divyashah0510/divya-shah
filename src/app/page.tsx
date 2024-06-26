@@ -1,5 +1,6 @@
 import About from "@/components/main/About";
 import Homepage from "@/components/main/Homepage";
+import Projects from "@/components/main/Projects";
 import { images } from "@/constants/experience";
 
 export default function Home() {
@@ -12,10 +13,10 @@ export default function Home() {
         {/* @ts-ignore */}
         <About images={images} />
       </div>
-      <div id="projects" className="text-center bg-gray-400 h-screen">
-        Projects
+      <div id="projects" className="text-center h-screen">
+        <Projects/>
       </div>
-      <div id="contact" className="text-center h-[94vh]">
+      <div id="contact" className="text-center h-[85vh]">
         Contact
       </div>
     </main>
