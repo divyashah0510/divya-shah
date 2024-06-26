@@ -74,10 +74,16 @@ const NavbarComponent = () => {
           {navList}
         </div>
         <div className="xl:w-[10%] lg:w-[10%] md:w-[20%] w-[20%]">
-          {/* @ts-ignore */}
-          <Button className="w-full -ml-5 rounded-3xl font-extrabold hidden lg:inline-block duration-700 ease-in-out hover:scale-105 hover:shadow-lg bg-[#1d3557] transition-all hover:bg-[#a8dadc] text-[#f1faee] hover:text-[#1d3557]">
-            Resume
-          </Button>
+          <Link
+            href="/resume/Divya Shah.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {/* @ts-ignore */}
+            <Button className="w-full -ml-5 rounded-3xl font-extrabold hidden lg:inline-block duration-700 ease-in-out hover:scale-105 hover:shadow-lg bg-[#1d3557] transition-all hover:bg-[#a8dadc] text-[#f1faee] hover:text-[#1d3557]">
+              Resume
+            </Button>
+          </Link>
         </div>
         {/* @ts-ignore */}
         <IconButton
@@ -127,11 +133,20 @@ const NavbarComponent = () => {
           >
             {navList}
           </div>
-          <div className="flex items-center gap-x-1">
-            {/* @ts-ignore */}
-            <Button fullWidth variant="gradient" size="sm" className="">
-              <span>Resume</span>
-            </Button>
+          <div className="flex self-center items-center justify-center gap-x-1">
+            <Link
+              href="/resume/Divya Shah.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {/* @ts-ignore */}
+              <Button
+                size="sm"
+                className="w-[50vh] -ml-5 rounded-3xl font-extrabold duration-700 ease-in-out hover:scale-105 hover:shadow-lg bg-[#1d3557] transition-all hover:bg-[#a8dadc] text-[#f1faee] hover:text-[#1d3557]"
+              >
+                <span>Resume</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </Collapse>
