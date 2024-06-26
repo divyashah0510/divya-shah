@@ -25,7 +25,7 @@ const Projects = () => {
       {/* @ts-ignore */}
       <Typography
         as="h1"
-        className="text-4xl py-5 mt-2 font-extrabold font-playwrite text-center"
+        className="text-4xl py-5 mt-2 font-extrabold font-playwrite text-center text-[#1d3557]"
       >
         My Projects
       </Typography>
@@ -44,7 +44,7 @@ const Projects = () => {
               {/* @ts-ignore */}
               <Typography
                 as="p"
-                className="text-lg font-extrabold absolute font-playwrite"
+                className="text-lg font-extrabold absolute text-[#457b9d] font-playwrite"
               >
                 Project: <span>{project.name}</span>
               </Typography>
@@ -78,7 +78,7 @@ const Projects = () => {
               {open[index] && (
                 <div className="absolute bottom-4 flex space-x-4">
                   {/* @ts-ignore */}
-                  <Button variant="gradient">
+                  <Button className="hover:bg-[#a8dadc] bg-[#1d3557] transition-all duration-700 ease-in-out">
                     {/* eslint-disable */}
                     <Link
                       href={project.link}

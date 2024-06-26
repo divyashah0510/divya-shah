@@ -61,14 +61,14 @@ const About = ({ images }: { images: Array<string> }) => {
           {/* @ts-ignore */}
           <Typography
             as="h1"
-            className="font-extrabold xl:text-4xl lg:text-4xl md:text-3xl sm:text-xl font-playwrite mb-6"
+            className="font-extrabold xl:text-4xl lg:text-4xl md:text-3xl sm:text-xl font-playwrite mb-6 text-[#1d3557]"
           >
             My Skills
           </Typography>
           {/* @ts-ignore */}
           <Typography
             as="h2"
-            className="font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2"
+            className="font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2 text-[#457b9d]"
           >
             My Frontend Skills
           </Typography>
@@ -93,7 +93,7 @@ const About = ({ images }: { images: Array<string> }) => {
           {/* @ts-ignore */}
           <Typography
             as="h2"
-            className="mt-2 font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2 "
+            className="mt-2 font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2 text-[#457b9d]"
           >
             My Backend Skills
           </Typography>
@@ -118,7 +118,7 @@ const About = ({ images }: { images: Array<string> }) => {
           {/* @ts-ignore */}
           <Typography
             as="h2"
-            className="mt-2 font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2 "
+            className="mt-2 font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2 text-[#457b9d]"
           >
             Other Skills
           </Typography>
@@ -143,7 +143,7 @@ const About = ({ images }: { images: Array<string> }) => {
           {/* @ts-ignore */}
           <Typography
             as="h2"
-            className="mt-2 font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2 "
+            className="mt-2 font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2 text-[#457b9d]"
           >
             Currently Learning
           </Typography>
@@ -170,7 +170,7 @@ const About = ({ images }: { images: Array<string> }) => {
           {/* @ts-ignore */}
           <Typography
             as="h1"
-            className="sm:mt-10 md:mt-10 xl:-mt-10 lg:-mt-10 font-extrabold xl:text-4xl lg:text-4xl md:text-3xl sm:text-xl font-playwrite"
+            className="sm:mt-10 md:mt-10 xl:-mt-10 lg:-mt-10 font-extrabold xl:text-4xl lg:text-4xl md:text-3xl sm:text-xl font-playwrite text-[#1d3557] cursor-default "
           >
             My Experience
           </Typography>

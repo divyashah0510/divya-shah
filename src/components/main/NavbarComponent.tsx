@@ -33,21 +33,19 @@ const NavbarComponent = () => {
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 justify-center items-center">
       <Link
-        className="px-5 rounded-xl hover:bg-black transition-all duration-700 ease-in-out      hover:text-white"
+        className="px-5 rounded-xl hover:bg-[#1d3557] transition-all duration-700 ease-in-out font-Kanit hover:text-white"
         href="#about"
       >
         <li>About</li>
       </Link>
       <Link
-        className="px-5 rounded-xl hover:bg-black transition-all duration-700 ease-in-out      
-        hover:text-white"
+        className="px-5 rounded-xl hover:bg-[#1d3557] transition-all duration-700 ease-in-out font-Kanit hover:text-white"
         href="#projects"
       >
         <li>Projects</li>
       </Link>
       <Link
-        className="px-5 rounded-xl hover:bg-black transition-all duration-700 ease-in-out      
-        hover:text-white"
+        className="px-5 rounded-xl hover:bg-[#1d3557] transition-all duration-700 ease-in-out font-Kanit hover:text-white"
         href="#contact"
       >
         <li>Contact</li>
@@ -77,10 +75,7 @@ const NavbarComponent = () => {
         </div>
         <div className="xl:w-[10%] lg:w-[10%] md:w-[20%] w-[20%]">
           {/* @ts-ignore */}
-          <Button
-            variant="gradient"
-            className="w-full -ml-5 rounded-3xl font-extrabold hidden lg:inline-block duration-700 ease-in-out hover:scale-105 hover:shadow-lg"
-          >
+          <Button className="w-full -ml-5 rounded-3xl font-extrabold hidden lg:inline-block duration-700 ease-in-out hover:scale-105 hover:shadow-lg bg-[#1d3557] transition-all hover:bg-[#a8dadc] text-[#f1faee] hover:text-[#1d3557]">
             Resume
           </Button>
         </div>

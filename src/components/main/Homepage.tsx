@@ -38,7 +38,7 @@ const Homepage = () => {
               {/* @ts-ignore */}
               <Typography
                 as="h1"
-                className="font-extrabold text-4xl font-playwrite mb-10"
+                className="font-extrabold text-4xl font-playwrite mb-10 text-[#1d3557]"
               >
                 Welcome to my Portfolio
               </Typography>
@@ -60,7 +60,7 @@ const Homepage = () => {
               {/* @ts-ignore */}
               <Typography
                 as="div"
-                className="font-extrabold w-[90%] font-playwrite mt-10 xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl xl:h-24 lg:h-24 md:h-32 sm:h-28 h-16"
+                className="font-extrabold w-[90%] font-playwrite mt-10 xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl xl:h-24 lg:h-24 md:h-32 sm:h-28 h-16 text-[#1d3557]"
               >
                 <Typewriter
                   options={{
@@ -87,7 +87,7 @@ const Homepage = () => {
               <div className="bg-black bg-opacity-45"></div>
             </section>
           </div>
-          <section className="w-[10%] -mt-2 mx-auto flex justify-center items-center">
+          <section className="w-[20%] xl:mt-28 lg:mt-28 md:mt-28 sm:-mt-2 mx-auto flex justify-center items-center">
             <button
               className="button mb-10"
               onClick={() => {
