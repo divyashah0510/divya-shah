@@ -4,80 +4,42 @@ import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
 
 const Earth = (props) => {
   const group = useRef();
-  const { nodes, materials } = useGLTF("models/Divya.glb");
-  const {animations:textingAnimation} = useFBX("animations/Texting.fbx");
-  textingAnimation[0].name = "Texting";
-  const { actions } = useAnimations([textingAnimation[0]], group);
-  useEffect(() => {
-    actions["Texting"].reset().play();
-  }
-  , [actions]);
-
+  const { nodes, materials, animations } = useGLTF(
+    "models/stylized_planet.glb"
+  );
+  const { actions } = useAnimations(animations, group);
   return (
-    <group {...props} ref={group} dispose={null}position={[0,-0.98,0]}>
-      <group rotation={[-90, 0, 0]}>
-        <primitive object={nodes.Hips} />
-        <skinnedMesh
-          geometry={nodes.Wolf3D_Body.geometry}
-          material={materials.Wolf3D_Body}
-          skeleton={nodes.Wolf3D_Body.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.Wolf3D_Outfit_Bottom.geometry}
-          material={materials.Wolf3D_Outfit_Bottom}
-          skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.Wolf3D_Outfit_Footwear.geometry}
-          material={materials.Wolf3D_Outfit_Footwear}
-          skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.Wolf3D_Outfit_Top.geometry}
-          material={materials.Wolf3D_Outfit_Top}
-          skeleton={nodes.Wolf3D_Outfit_Top.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.Wolf3D_Hair.geometry}
-          material={materials.Wolf3D_Hair}
-          skeleton={nodes.Wolf3D_Hair.skeleton}
-        />
-        <skinnedMesh
-          name="EyeLeft"
-          geometry={nodes.EyeLeft.geometry}
-          material={materials.Wolf3D_Eye}
-          skeleton={nodes.EyeLeft.skeleton}
-          morphTargetDictionary={nodes.EyeLeft.morphTargetDictionary}
-          morphTargetInfluences={nodes.EyeLeft.morphTargetInfluences}
-        />
-        <skinnedMesh
-          name="EyeRight"
-          geometry={nodes.EyeRight.geometry}
-          material={materials.Wolf3D_Eye}
-          skeleton={nodes.EyeRight.skeleton}
-          morphTargetDictionary={nodes.EyeRight.morphTargetDictionary}
-          morphTargetInfluences={nodes.EyeRight.morphTargetInfluences}
-        />
-        <skinnedMesh
-          name="Wolf3D_Head"
-          geometry={nodes.Wolf3D_Head.geometry}
-          material={materials.Wolf3D_Skin}
-          skeleton={nodes.Wolf3D_Head.skeleton}
-          morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary}
-          morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences}
-        />
-        <skinnedMesh
-          name="Wolf3D_Teeth"
-          geometry={nodes.Wolf3D_Teeth.geometry}
-          material={materials.Wolf3D_Teeth}
-          skeleton={nodes.Wolf3D_Teeth.skeleton}
-          morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary}
-          morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences}
-        />
+    <group ref={group} {...props} dispose={null}>
+      <group name="Sketchfab_Scene">
+        <group name="Sketchfab_model" rotation={[-1.54, -0.064, 0]}>
+          <group name="root">
+            <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 0, 0]}>
+              <group name="Clouds_1">
+                <mesh
+                  name="Object_4"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.Object_4.geometry}
+                  material={materials.Clouds}
+                />
+              </group>
+              <group name="Planet_2">
+                <mesh
+                  name="Object_6"
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.Object_6.geometry}
+                  material={materials.Planet}
+                />
+              </group>
+            </group>
+          </group>
+        </group>
       </group>
     </group>
   );
 };
-useGLTF.preload("models/Divya.glb");
+
+useGLTF.preload("models/stylized_planet.glb");
 
 export default Earth;

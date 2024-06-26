@@ -73,11 +73,11 @@ const Homepage = () => {
                 />
               </Typography>
             </section>
-            <section className="my-[5%] xl:h-[50vh] xl:w-[50vw] lg:h-[50vh] lg:w-[50vw] md:h-[40vh] md:w-[55vw] sm:h-[40vh] sm:w-[90vw] w-[90vw] h-[30vh] mx-5 rounded-3xl shadow-xl">
+            <section className="my-[5%] xl:h-[50vh] xl:w-[50vw] lg:h-[50vh] lg:w-[50vw] md:h-[40vh] md:w-[55vw] sm:h-[40vh] sm:w-[90vw] w-[90vw] h-[30vh] mx-5 shadow-2xl rounded-3xl">
               <Canvas
                 shadows
                 camera={{ position: [0, 2, 5], fov: 12 }}
-                className="bg-[#f1faee] rounded-3xl"
+                className="rounded-b-xl"
               >
                 <Environment preset="dawn" />
                 <group position={[0, -1.5, 0]}>

@@ -41,10 +41,13 @@ const About = ({ images }: { images: Array<string> }) => {
               <Canvas camera={{ position: [0, 2, 5], fov: shape.fov }}>
                 <Environment preset="lobby" />
                 <Suspense fallback={null}>
-                  <shape.shape />
+                  <group rotation={[-45, 0, 0]}>
+                    <shape.shape />
+                  </group>
                 </Suspense>
                 <OrbitControls
                   autoRotate
+                  autoRotateSpeed={10}
                   enableZoom={false}
                   enableRotate={false}
                 />

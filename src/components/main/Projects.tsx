@@ -39,7 +39,7 @@ const Projects = () => {
               style={{
                 background: props.open.to([0, 1], ["#ffffff", "#ffffff"]),
               }}
-              className="relative xl:w-[30vw] xl:h-[40vh] lg:w-[20vw] lg:h-[40vh] md:w-[40vw] md:h-[20vh] sm:w-[90vw] sm:h-[10vh] w-[95%] h-[10vh] flex justify-center items-center"
+              className="relative xl:w-[30vw] xl:h-[40vh] lg:w-[30vw] lg:h-[40vh] md:w-[40vw] md:h-[25vh] sm:w-[90vw] sm:h-[20vh] w-[90vw] h-[14vh] flex justify-center items-center"
             >
               {/* @ts-ignore */}
               <Typography
@@ -60,6 +60,7 @@ const Projects = () => {
                     onClick={(e) => (e.stopPropagation(), toggleOpen(index))}
                   >
                     <project.modelname
+                      className="transition-all duration-1000 ease-in-out"
                       open={open[index]}
                       hinge={props.open.to([0, 1], [1.575, -0.425])}
                     />

@@ -13,10 +13,10 @@ const FooterComponent = () => {
           {/* @ts-ignore */}
           <Typography
             variant="small"
-            className="mb-4 text-center font-normal text-gray-400 md:mb-0"
+            className="mb-4 text-center font-normal text-[#1d3557] md:mb-0"
           >
             &copy; {currentYear}{" "}
-            <Link href="mailto://shah.divya.2206@gmail.com">
+            <Link className="hover:text-[#a8dadc] transition-all duration-500 ease-in-out" href="mailto://shah.divya.2206@gmail.com">
               shah.divya.2206@gmail.com
             </Link>
             . All Rights Reserved.
@@ -25,7 +25,8 @@ const FooterComponent = () => {
             {/* @ts-ignore */}
             <Typography
               as="a"
-              href="/"
+              href="https://www.facebook.com/profile.php?id=100015271690346&mibextid=ZbWKwL"
+              target="_blank"
               className="opacity-80 transition-opacity hover:opacity-100"
             >
               <svg
@@ -44,7 +45,8 @@ const FooterComponent = () => {
             {/* @ts-ignore */}
             <Typography
               as="a"
-              href="/"
+              href="https://www.instagram.com/divya_shah2206?igsh=MTNid3Q0a3Qxem13OQ=="
+              target="_blank"
               className="opacity-80 transition-opacity hover:opacity-100"
             >
               <svg
@@ -63,7 +65,8 @@ const FooterComponent = () => {
             {/* @ts-ignore */}
             <Typography
               as="a"
-              href="#"
+              href="https://x.com/Divya_Shah22?t=Vz3WW0UNQIRDNu6loH3H_w&s=08"
+              target="_blank"
               className="opacity-80 transition-opacity hover:opacity-100"
             >
               <svg
@@ -78,7 +81,8 @@ const FooterComponent = () => {
             {/* @ts-ignore */}
             <Typography
               as="a"
-              href="#"
+              href="https://github.com/divyashah0510"
+              target="_blank"
               className="opacity-80 transition-opacity hover:opacity-100"
             >
               <svg
@@ -97,7 +101,8 @@ const FooterComponent = () => {
             {/* @ts-ignore */}
             <Typography
               as="a"
-              href="#"
+              href="/"
+              target="_self"
               className="opacity-80 transition-opacity hover:opacity-100"
             >
               <svg

@@ -1,4 +1,5 @@
 import About from "@/components/main/About";
+import Contact from "@/components/main/Contact";
 import Homepage from "@/components/main/Homepage";
 import Projects from "@/components/main/Projects";
 import { images } from "@/constants/experience";
@@ -16,8 +17,8 @@ export default function Home() {
       <div id="projects" className="text-center h-screen">
         <Projects/>
       </div>
-      <div id="contact" className="text-center h-[85vh]">
-        Contact
+      <div id="contact" className="text-center xl:h-[85vh] lg:h-[85vh] md:h-[105vh] sm:h-[95vh] h-[95vh]">
+        <Contact/>
       </div>
     </main>
   );
