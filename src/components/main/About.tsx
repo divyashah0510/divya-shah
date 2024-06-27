@@ -19,6 +19,7 @@ import { useRouter } from "next/navigation";
 
 const About = ({ images }: { images: Array<string> }) => {
   const navigation = useRouter();
+  console.log("Rendering About component");
   return (
     <main className="w-full h-full flex flex-col justify-center items-center">
       <section className="w-full h-full relative">
@@ -30,6 +31,7 @@ const About = ({ images }: { images: Array<string> }) => {
             // height: "25%",
             zIndex: "10",
           };
+          console.log(`Rendering model shape at index ${index}`);
 
           return (
             <section
