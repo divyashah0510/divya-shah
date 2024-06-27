@@ -1,4 +1,4 @@
-// Frames.jsx
+"use client";
 import React, { useEffect, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useRoute, useLocation } from "wouter";

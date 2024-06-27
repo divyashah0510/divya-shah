@@ -1,3 +1,4 @@
+"use client";
 import MetaCharacter from "@/Models/MetaCharacter";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";

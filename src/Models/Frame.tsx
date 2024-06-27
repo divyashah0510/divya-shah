@@ -1,7 +1,8 @@
+"use client";
 import { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useCursor, Image, Text } from "@react-three/drei";
-import { useRoute, useLocation } from "wouter";
+import { useRoute } from "wouter";
 import { easing } from "maath";
 import getUuid from "uuid-by-string";
 import * as THREE from "three";

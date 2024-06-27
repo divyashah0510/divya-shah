@@ -21,7 +21,7 @@ const About = ({ images }: { images: Array<string> }) => {
   const navigation = useRouter();
   console.log("Rendering About component");
   return (
-    <main className="w-full h-full flex flex-col justify-center items-center">
+    <main className="xl:w-full xl:h-full lg:w-full lg:h-full md:w-full md:h-full sm:w-full sm:h-full w-full h-full sm:mt-[40%] xl:mt-0 lg:mt-0 md:mt-0 mt-[40%] flex flex-col justify-center items-center">
       <section className="w-full h-full relative">
         {modelShape.map((shape, index) => {
           const style = {
@@ -47,12 +47,7 @@ const About = ({ images }: { images: Array<string> }) => {
                     <shape.shape />
                   </group>
                 </Suspense>
-                <OrbitControls
-                  autoRotate
-                  autoRotateSpeed={10}
-                  enableZoom={false}
-                  enableRotate={false}
-                />
+                <OrbitControls enableZoom={false} enableRotate={false} />
               </Canvas>
             </section>
           );
@@ -178,7 +173,7 @@ const About = ({ images }: { images: Array<string> }) => {
           </Typography>
           <section className="w-full h-full">
             <Canvas
-              className="rounded-b-2xl xl:w-full xl:h-full
+              className="rounded-b-2xl xl:w-full xl:h-full bg-transparent
               lg:w-full lg:h-full md:h-[90%]"
               dpr={[1, 1.5]}
               camera={{ fov: 70, position: [0, 2, 15] }}

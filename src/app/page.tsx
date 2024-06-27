@@ -1,3 +1,4 @@
+"use client";
 import About from "@/components/main/About";
 import Contact from "@/components/main/Contact";
 import Homepage from "@/components/main/Homepage";
@@ -6,7 +7,7 @@ import { images } from "@/constants/experience";
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full">
       <div className="text-center h-[94vh]  bg-opacity-30">
         <Homepage />
       </div>
