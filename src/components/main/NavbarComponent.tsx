@@ -133,7 +133,7 @@ const NavbarComponent = () => {
           >
             {navList}
           </div>
-          <div className="flex self-center items-center justify-center gap-x-1">
+          <div className="flex self-center items-center justify-center gap-x-1 gap-y-2">
             <Link
               href="/resume/Divya Shah.pdf"
               target="_blank"
@@ -141,8 +141,9 @@ const NavbarComponent = () => {
             >
               {/* @ts-ignore */}
               <Button
+                fullWidth
                 size="sm"
-                className="w-[50vh] -ml-5 rounded-3xl font-extrabold duration-700 ease-in-out hover:scale-105 hover:shadow-lg bg-[#1d3557] transition-all hover:bg-[#a8dadc] text-[#f1faee] hover:text-[#1d3557]"
+                className="rounded-3xl font-extrabold duration-700 ease-in-out hover:scale-105 hover:shadow-lg bg-[#1d3557] transition-all hover:bg-[#a8dadc] text-[#f1faee] hover:text-[#1d3557]"
               >
                 <span>Resume</span>
               </Button>

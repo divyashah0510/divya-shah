@@ -12,10 +12,10 @@ import Link from "next/link";
 const Projects = () => {
   const [open, setOpen] = useState(Array(projects.length).fill(false));
 
-  const toggleOpen = (index: any) => {
+  const toggleOpen = (index: number) => {
     setOpen((prev) => {
-      const newOpen = [...prev];
-      newOpen[index] = !newOpen[index];
+      const newOpen = prev.map((open, i) => (i === index ? !open : false));
+      // newOpen[index] = !newOpen[index];
       return newOpen;
     });
   };
@@ -44,10 +44,12 @@ const Projects = () => {
               {/* @ts-ignore */}
               <Typography
                 as="p"
-                className="text-lg font-extrabold absolute text-[#457b9d] font-playwrite"
+                style={{ visibility: open[index] ? "hidden" : "visible" }}
+                className="text-lg font-extrabold absolute text-[#457b9d] font-playwrite transition-all duration-75 ease-in-out"
               >
                 Project: <span>{project.name}</span>
               </Typography>
+
               <Canvas dpr={[1, 2]} camera={{ position: [0, 0, -30], fov: 30 }}>
                 <three.pointLight
                   position={[10, 10, 10]}

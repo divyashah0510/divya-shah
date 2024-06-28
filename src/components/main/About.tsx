@@ -19,7 +19,6 @@ import { useRouter } from "next/navigation";
 
 const About = ({ images }: { images: Array<string> }) => {
   const navigation = useRouter();
-  console.log("Rendering About component");
   return (
     <main className="xl:w-full xl:h-full lg:w-full lg:h-full md:w-full md:h-full sm:w-full sm:h-full w-full h-full sm:mt-[40%] xl:mt-0 lg:mt-0 md:mt-0 mt-[40%] flex flex-col justify-center items-center">
       <section className="w-full h-full relative">
@@ -31,7 +30,6 @@ const About = ({ images }: { images: Array<string> }) => {
             // height: "25%",
             zIndex: "10",
           };
-          console.log(`Rendering model shape at index ${index}`);
 
           return (
             <section
@@ -47,7 +45,12 @@ const About = ({ images }: { images: Array<string> }) => {
                     <shape.shape />
                   </group>
                 </Suspense>
-                <OrbitControls enableZoom={false} enableRotate={false} />
+                <OrbitControls
+                  enableZoom={false}
+                  enableRotate={false}
+                  autoRotate
+                  autoRotateSpeed={5}
+                />
               </Canvas>
             </section>
           );
@@ -67,7 +70,7 @@ const About = ({ images }: { images: Array<string> }) => {
             as="h2"
             className="font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2 text-[#457b9d]"
           >
-            My Frontend Skills
+            Frontend
           </Typography>
           <div className="flex flex-row space-x-5 justify-center items-center self-center ">
             {Frontend_skill.map((skill, index) => {
@@ -92,7 +95,7 @@ const About = ({ images }: { images: Array<string> }) => {
             as="h2"
             className="mt-2 font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2 text-[#457b9d]"
           >
-            My Backend Skills
+            Backend
           </Typography>
           <div className="flex flex-row space-x-5 justify-center items-center">
             {Backend_skill.map((skill, index) => {
@@ -117,7 +120,7 @@ const About = ({ images }: { images: Array<string> }) => {
             as="h2"
             className="mt-2 font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2 text-[#457b9d]"
           >
-            Other Skills
+            Others
           </Typography>
           <div className="flex flex-row space-x-5 justify-center items-center">
             {Other_skill.map((skill, index) => {
@@ -142,7 +145,7 @@ const About = ({ images }: { images: Array<string> }) => {
             as="h2"
             className="mt-2 font-extrabold xl:text-2xl lg:text-2xl md:text-xl sm:text-lg font-Kanit mb-2 text-[#457b9d]"
           >
-            Currently Learning
+            Learning...
           </Typography>
           <div className="flex flex-row space-x-5 justify-center items-center mb-16">
             {Learning_skill.map((skill, index) => {

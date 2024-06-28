@@ -1,13 +1,40 @@
 "use client";
 import { Environment, OrbitControls, Sky } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import React, { Suspense } from "react";
+import React, { Suspense, useRef } from "react";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { Euler, Vector3 } from "three";
 import Earth from "@/Models/Earth";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef(null);
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+    
+    emailjs
+      .sendForm(
+        "service_co7dn2l",
+        "template_bs9bobm",
+        // @ts-ignore
+        form.current,
+        "uVjxkuz78i5RuoQ4S"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Your message has been sent successfully!");
+          // @ts-ignore
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          alert("There was an error sending your message. Please try again.");
+        }
+      );
+  };
   return (
     <div
       id="contact"
@@ -20,7 +47,12 @@ const Contact = () => {
         className="w-7/12 rounded-xl"
       >
         {/* Create a form having name emailid and textarea */}
-        <form className="flex flex-col space-y-4 p-4">
+        <form
+          className="flex flex-col space-y-4 p-4"
+          id="contact-form"
+          ref={form}
+          onSubmit={sendEmail}
+        >
           <h1 className="xl:text-3xl lg:text-3xl md:text-3xl sm:text-xl text-xl font-extrabold font-playwrite mt-10 text-[#1d3557]">
             Let&apos;s Connect
           </h1>
@@ -42,8 +74,9 @@ const Contact = () => {
           <input
             type="text"
             id="name"
-            className="border-2 p-2 rounded-2xl text-black"
+            className="border-2 p-2 rounded-2xl text-black border-[#a8dadc]"
             placeholder="Name"
+            name="user_name"
           />
           <label
             className="flex font-playwrite text-[#457b9d] mx-2"
@@ -54,8 +87,9 @@ const Contact = () => {
           <input
             type="email"
             id="email"
-            className="border-2 p-2 rounded-2xl text-black"
+            className="border-2 p-2 rounded-2xl text-black border-[#a8dadc]"
             placeholder="Email"
+            name="user_email"
           />
           <label
             className="flex font-playwrite text-[#457b9d] mx-2"
@@ -65,10 +99,14 @@ const Contact = () => {
           </label>
           <textarea
             id="message"
-            className="border-2 p-2 rounded-2xl text-black"
+            className="border-2 p-2 rounded-2xl text-black border-[#a8dadc]"
             placeholder="Message"
+            name="message"
           />
-          <button className="bg-[#1d3557] hover:bg-[#a8dadc] font-extrabold hover:text-[#f1faee] p-2 rounded-2xl text-[#f1faee] transition-all duration-700 ease-in-out">
+          <button
+            className="bg-[#1d3557] hover:bg-[#a8dadc] font-extrabold hover:text-[#f1faee] p-2 rounded-2xl text-[#f1faee] transition-all duration-700 ease-in-out border-0"
+            type="submit"
+          >
             Submit
           </button>
         </form>
@@ -90,7 +128,7 @@ const Contact = () => {
           </Suspense>
           <OrbitControls
             autoRotate
-            autoRotateSpeed={20}
+            autoRotateSpeed={5}
             enableRotate={false}
             enableZoom={false}
           />

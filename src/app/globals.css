@@ -52,6 +52,10 @@ html {
   fill: #0a66c2;
   filter: drop-shadow(0 0 20px white);
 }
+.svg-profileicon:hover{
+  fill: #a8dadc;
+  filter: drop-shadow(0 0 20px white);
+}
 body {
   overflow-x: hidden;
   font-family: Kanit;

@@ -18,6 +18,12 @@ export const Frontend_skill = [
         height: 50,
     },
     {
+        skill_name: "Type Script",
+        Image: "/svg/typescript.svg",
+        width: 50,
+        height: 50,
+    },
+    {
         skill_name: "Tailwind Css",
         Image: "/svg/tailwind-css.svg",
         width: 50,
@@ -30,26 +36,32 @@ export const Frontend_skill = [
         height: 50,
     },
     {
-        skill_name: "Three js",
-        Image: "/svg/threejs.svg",
-        width: 50,
-        height: 50,
-    },
-    {
-        skill_name: "Type Script",
-        Image: "/svg/typescript.svg",
-        width: 50,
-        height: 50,
-    },
-    {
         skill_name: "Next js 13",
         Image: "/svg/nextjs.svg",
+        width: 50,
+        height: 50,
+    },
+    {
+        skill_name: "Three js",
+        Image: "/svg/threejs.svg",
         width: 50,
         height: 50,
     },
 ];
 
 export const Backend_skill = [
+    {
+        skill_name: "My SQL",
+        Image: "/svg/mysql.svg",
+        width: 50,
+        height: 50,
+    },
+    {
+        skill_name: "Microsoft SQL Server Management Studio",
+        Image: "/svg/microsoft-sql-server.svg",
+        width: 50,
+        height: 50,
+    },
     {
         skill_name: "Node js",
         Image: "/svg/nodejs.svg",
@@ -73,18 +85,6 @@ export const Backend_skill = [
         Image: "/svg/firebase.svg",
         width: 50,
         height: 50,
-    },
-    {
-        skill_name: "My SQL",
-        Image: "/svg/mysql.svg",
-        width: 50,
-        height: 50,
-    },
-    {
-        skill_name: "Microsoft SQL Server Management Studio",
-        Image: "/svg/microsoft-sql-server.svg",
-        width: 50,
-        height: 50,
     }
 ];
 
@@ -92,14 +92,14 @@ export const Full_stack = [
     {
         skill_name: "React Native",
         Image: "/svg/react-native.svg",
-        width: 70,
-        height: 70,
+        width: 50,
+        height: 50,
     },
     {
         skill_name: "Docker",
         Image: "/svg/docker.svg",
-        width: 70,
-        height: 70,
+        width: 50,
+        height: 50,
     },
     {
         skill_name: "Canva",
@@ -111,8 +111,8 @@ export const Full_stack = [
 
 export const Other_skill = [
     {
-        skill_name: "Python",
-        Image: "/svg/python.svg",
+        skill_name: "C",
+        Image: "/svg/c.svg",
         width: 50,
         height: 50,
     },
@@ -129,11 +129,12 @@ export const Other_skill = [
         height: 50,
     },
     {
-        skill_name: "C",
-        Image: "/svg/c.svg",
+        skill_name: "Python",
+        Image: "/svg/python.svg",
         width: 50,
         height: 50,
-    }
+    },
+
 ];
 
 export const Learning_skill = [
