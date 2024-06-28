@@ -4,7 +4,7 @@
 
 </center>
 
-<!-- [Portfolio](https://shah-divya.vercel.app/) -->
+[Portfolio](https://divya-shah.vercel.app/)
 
 # Status
 `In Progress`

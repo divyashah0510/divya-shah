@@ -16,6 +16,7 @@
     "@react-three/drei": "^9.107.2",
     "@react-three/fiber": "^8.16.8",
     "@types/three": "^0.165.0",
+    "@vercel/speed-insights": "^1.0.12",
     "leva": "^0.9.35",
     "maath": "^0.10.7",
     "next": "14.2.4",
