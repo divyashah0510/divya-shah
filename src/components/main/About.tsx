@@ -57,7 +57,7 @@ const About = ({ images }: { images: Array<string> }) => {
         })}
       </section>
       <div className="absolute xl:flex xl:flex-row md:flex-col justify-center items-center self-center xl:space-x-14 md:space-y-10 aboutDiv">
-        <section className="px-5 rounded-2xl shadow-xl">
+        <section className="px-5 rounded-2xl shadow-xl xl:h-[59vh] lg:h-[59vh]">
           {/* @ts-ignore */}
           <Typography
             as="h1"
