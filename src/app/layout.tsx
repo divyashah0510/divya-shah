@@ -4,6 +4,7 @@ import "./globals.css";
 import NavbarComponent from "@/components/main/NavbarComponent";
 import FooterComponent from "@/components/main/FooterComponent";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <NavbarComponent />
         {children}
         <SpeedInsights />
+        <Analytics />
         <FooterComponent />
       </body>
     </html>
