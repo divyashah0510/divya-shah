@@ -76,7 +76,7 @@ export function Frame({ url, c = new THREE.Color(), ...props }) {
           url={url}
         />
       </mesh>
-      <Text
+      {/* <Text
         maxWidth={0.1}
         anchorX="left"
         anchorY="top"
@@ -85,7 +85,7 @@ export function Frame({ url, c = new THREE.Color(), ...props }) {
         color="#1d3557"
       >
         {props.name}
-      </Text>
+      </Text> */}
     </group>
   );
 }
