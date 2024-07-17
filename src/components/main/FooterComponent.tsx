@@ -6,7 +6,7 @@ import Link from "next/link";
 const currentYear = new Date().getFullYear();
 const FooterComponent = () => {
   return (
-    <footer className="relative w-screen">
+    <footer className="relative w-screen mt-20">
       <div className="mx-auto max-w-7xl px-8">
         <div className="mx-auto grid grid-cols-1 py-6 md:grid-cols-2 lg:grid-cols-4"></div>
         <div className="flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">

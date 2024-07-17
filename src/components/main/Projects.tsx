@@ -45,7 +45,7 @@ const Projects = () => {
               <Typography
                 as="p"
                 style={{ visibility: open[index] ? "hidden" : "visible" }}
-                className="text-lg font-extrabold absolute text-[#457b9d] font-playwrite transition-all duration-75 ease-in-out"
+                className="text-[10px] sm:text-[15px] md:text-[20px] lg:text-[20px] font-extrabold absolute text-[#457b9d] font-playwrite transition-all duration-75 ease-in-out"
               >
                 Project: <span>{project.name}</span>
               </Typography>
