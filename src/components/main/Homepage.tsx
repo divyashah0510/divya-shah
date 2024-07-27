@@ -47,30 +47,26 @@ const Homepage = () => {
                 as="h2"
                 className="text-gradient font-extrabold font-Kanit lg:text-5xl xl:text-6xl md:text-6xl sm:text-4xl text-[0px]"
               >
-                Full Stack Web
-              </Typography>
-              {/* @ts-ignore */}
-
-              <Typography
-                as="h2"
-                className="text-gradient font-extrabold font-Kanit lg:text-5xl lg:mt-0 xl:text-6xl md:text-6xl md:mt-0 sm:text-4xl sm:mt-0 text-3xl"
-              >
-                Developer
+                <Typewriter
+                  options={{
+                    strings: [
+                      "Frontend Developer",
+                      "DevOps Engineer",
+                      "Web Developer",
+                      "Mobile App Developer",
+                    ],
+                    autoStart: background,
+                    loop: true,
+                  }}
+                />
               </Typography>
               {/* @ts-ignore */}
               <Typography
                 as="div"
                 className="font-extrabold w-[90%] font-playwrite mt-10 xl:text-3xl lg:text-3xl md:text-3xl sm:text-2xl xl:h-24 lg:h-24 md:h-32 sm:h-28 h-16 text-[#1d3557]"
               >
-                <Typewriter
-                  options={{
-                    strings: [
-                      "I'm Divya Shah. A passionate Full Stack Web Developer from Mumbai, India.",
-                    ],
-                    autoStart: background,
-                    loop: true,
-                  }}
-                />
+                I&apos;m Divya Shah. A passionate Full Stack Web Developer from
+                Mumbai, India.
               </Typography>
             </section>
             <section className="my-[5%] xl:h-[50vh] xl:w-[50vw] lg:h-[50vh] lg:w-[50vw] md:h-[40vh] md:w-[55vw] sm:h-[40vh] sm:w-[90vw] w-[90vw] h-[30vh] mx-5 shadow-2xl rounded-3xl">

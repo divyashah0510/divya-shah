@@ -111,7 +111,7 @@ const Contact = () => {
           </button>
         </form>
       </motion.section>
-      <section className="xl:flex-row lg:flex-row md:flex-col rounded-2xl xl:h-[80vh] xl:w-[40%] lg:h-[80vh] lg:w-[40%] md:h-[40vh] md:w-[90vw] sm:w-[90vw] sm:h-[40vh] w-[90%] h-[30vh] mt-2 mb-12">
+      <section className="xl:flex-row lg:flex-row md:flex-col rounded-2xl xl:h-[70vh] xl:w-[40%] lg:h-[80vh] lg:w-[40%] md:h-[40vh] md:w-[90vw] sm:w-[90vw] sm:h-[40vh] w-[90%] h-[30vh] mt-2 mb-12">
         <Canvas
           shadows
           className="w-full h-full rounded-xl -mx-2 mb-[20vh]"

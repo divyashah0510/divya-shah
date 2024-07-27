@@ -57,7 +57,7 @@ const About = ({ images }: { images: Array<string> }) => {
         })}
       </section>
       <div className="absolute xl:flex xl:flex-row md:flex-col justify-center items-center self-center xl:space-x-14 md:space-y-10 aboutDiv">
-        <section className="px-5 rounded-2xl shadow-xl xl:h-[59vh] lg:h-[59vh]">
+        <section className="px-5 rounded-2xl shadow-xl xl:h-[65vh] xl:w-[70vw] lg:h-[59vh]">
           {/* @ts-ignore */}
           <Typography
             as="h1"
@@ -166,8 +166,8 @@ const About = ({ images }: { images: Array<string> }) => {
             })}
           </div>
         </section>
-        <section className="xl:w-[50vw] xl:h-[55vh] lg:h-[55vh] md:w-[70vw] md:h-[30vh] sm:w-full">
-          {/* @ts-ignore */}
+        {/* <section className="xl:w-[50vw] xl:h-[55vh] lg:h-[55vh] md:w-[70vw] md:h-[30vh] sm:w-full">
+          
           <Typography
             as="h1"
             className="sm:mt-10 md:mt-10 xl:-mt-10 lg:-mt-10 font-extrabold xl:text-4xl lg:text-4xl md:text-3xl sm:text-xl font-playwrite text-[#1d3557] cursor-default "
@@ -181,13 +181,11 @@ const About = ({ images }: { images: Array<string> }) => {
               dpr={[1, 1.5]}
               camera={{ fov: 70, position: [0, 2, 15] }}
             >
-              {/* <color /> */}
               <fog attach="fog" args={["#050505", 0, 15]} />
               <group position={[0, -0.5, 0]}>
                 <Frames images={images} />
                 <mesh rotation={[-Math.PI / 2, 0, 0]}>
                   <planeGeometry args={[50, 50]} />
-                  {/* @ts-ignore */}
                   <MeshReflectorMaterial
                     blur={[300, 100]}
                     resolution={2048}
@@ -205,7 +203,7 @@ const About = ({ images }: { images: Array<string> }) => {
               <Environment preset="city" />
             </Canvas>
           </section>
-        </section>
+        </section> */}
       </div>
     </main>
   );
