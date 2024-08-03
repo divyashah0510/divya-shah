@@ -20,8 +20,8 @@ import { useRouter } from "next/navigation";
 const About = ({ images }: { images: Array<string> }) => {
   const navigation = useRouter();
   return (
-    <main className="xl:w-full xl:h-full lg:w-full lg:h-full md:w-full md:h-full sm:w-full sm:h-full w-full h-full sm:mt-[40%] xl:mt-0 lg:mt-0 md:mt-0 mt-[40%] flex flex-col justify-center items-center">
-      <section className="w-full h-full relative">
+    <main className="xl:w-full xl:h-full lg:w-full lg:h-full md:w-full md:h-full sm:w-full sm:h-full w-full h-full sm:mt-[2%] xl:mt-0 lg:mt-0 md:mt-0 mt-[1%] flex flex-col justify-center items-center">
+      <section className="w-full h-full relative hidden md:block">
         {modelShape.map((shape, index) => {
           const style = {
             position: "absolute",
