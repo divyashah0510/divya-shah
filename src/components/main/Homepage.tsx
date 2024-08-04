@@ -34,7 +34,7 @@ const Homepage = () => {
       {background ? (
         <>
           <div className="flex xl:px-[5%] xl:flex-row lg:px-[5%] lg:flex-row md:px-[5%] md:flex-row sm:px-[2%] sm:flex-col flex-col ">
-            <section className="flex flex-col justify-center items-center text-center my-[5%] w-3/4 mx-1">
+            <section className="flex flex-col mx-auto justify-center items-center text-center my-[5%] w-3/4">
               {/* @ts-ignore */}
               <Typography
                 as="h1"
@@ -62,7 +62,8 @@ const Homepage = () => {
               {/* @ts-ignore */}
               <Typography
                 as="div"
-                className="font-extrabold w-[90%] font-playwrite xl:text-3xl lg:text-3xl md:text-sm md:mt-10 -mt-10  sm:text-2xl xl:h-24 lg:h-24 md:h-32 sm:h-28 h-16 leading-normal text-[#1d3557]"
+                className="font-extrabold w-[90%] font-playwrite xl:text-3xl lg:text-3xl md:text-sm md:mt-10 -mt-10  sm:text-2xl xl:h-24 lg:h-24 md:h-32 sm:h-28 h-16 text-[#1d3557]"
+                style={{lineHeight: "1.8" }}
               >
                 I&apos;m Divya Shah. A passionate Full Stack Web Developer from
                 Mumbai, India.
