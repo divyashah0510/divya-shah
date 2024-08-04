@@ -25,7 +25,7 @@ const Projects = () => {
       {/* @ts-ignore */}
       <Typography
         as="h1"
-        className="text-4xl py-5 mt-2 font-extrabold font-playwrite text-center text-[#1d3557]"
+        className="font-extrabold xl:text-4xl lg:text-4xl md:text-3xl sm:text-xl font-playwrite mb-6 text-[#1d3557]"
       >
         My Projects
       </Typography>
