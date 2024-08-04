@@ -45,7 +45,7 @@ const Homepage = () => {
               {/* @ts-ignore */}
               <Typography
                 as="h2"
-                className="text-gradient font-extrabold font-Kanit lg:text-5xl xl:text-6xl md:text-6xl sm:text-5xl text-xl leading-tight h-[25vh]"
+                className="text-gradient font-extrabold font-Kanit lg:text-5xl xl:text-6xl md:text-6xl sm:text-5xl text-xl leading-tight h-[23vh] border-2 xl:h-[10vh] lg:h-[10vh] md:h-[20vh] sm:h-[20vh]"
               >
                 <Typewriter
                   options={{
