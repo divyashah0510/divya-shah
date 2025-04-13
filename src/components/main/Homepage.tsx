@@ -34,7 +34,7 @@ const Homepage = () => {
       {background ? (
         <>
           <div className="flex xl:px-[5%] xl:flex-row lg:px-[5%] lg:flex-row md:px-[5%] md:flex-row sm:px-[2%] sm:flex-col flex-col ">
-            <section className="flex flex-col mx-auto justify-center items-center text-center my-[5%] w-3/4">
+            <section className="flex flex-col mx-auto justify-center items-center text-center my-[5%] xl:h-[50vh] xl:w-[50vw] lg:h-[50vh] lg:w-[50vw] md:h-[40vh] md:w-[55vw] sm:h-[40vh] sm:w-[90vw] w-[90vw] h-[30vh]">
               {/* @ts-ignore */}
               <Typography
                 as="h1"
@@ -45,14 +45,14 @@ const Homepage = () => {
               {/* @ts-ignore */}
               <Typography
                 as="h2"
-                className="text-gradient font-extrabold font-Kanit lg:text-5xl xl:text-6xl md:text-6xl sm:text-5xl text-xl leading-tight h-[23vh] xl:h-[10vh] lg:h-[10vh] md:h-[20vh] sm:h-[20vh]"
+                className="text-gradient font-extrabold font-Kanit lg:text-5xl xl:text-6xl md:text-6xl sm:text-5xl text-xl leading-tight h-[23vh] xl:h-[10vh] lg:h-[10vh] md:h-[20vh] md:w-full sm:h-[20vh] z-50"
               >
                 <Typewriter
                   options={{
                     strings: [
-                      "Frontend Developer",
+                      "FullStack Developer",
                       "DevOps Engineer",
-                      "Web Developer",
+                      "ServiceNow Developer",
                     ],
                     autoStart: background,
                     loop: true,
@@ -62,8 +62,8 @@ const Homepage = () => {
               {/* @ts-ignore */}
               <Typography
                 as="div"
-                className="font-extrabold w-[90%] font-playwrite xl:text-3xl lg:text-3xl md:text-sm md:mt-10 -mt-10  sm:text-2xl xl:h-24 lg:h-24 md:h-32 sm:h-28 h-16 text-[#1d3557]"
-                style={{lineHeight: "1.8" }}
+                className="font-extrabold w-[90%] font-playwrite xl:text-3xl lg:text-lg md:text-sm md:mt-10  sm:text-2xl xl:h-24 lg:h-24 md:h-32 sm:h-28 h-16 text-[#1d3557] text-lg"
+                style={{ lineHeight: "1.8" }}
               >
                 I&apos;m Divya Shah. A passionate Full Stack Web Developer from
                 Mumbai, India.
@@ -85,7 +85,7 @@ const Homepage = () => {
           </div>
           <section className="w-[20%] xl:mt-28 lg:mt-28 md:mt-28 sm:-mt-2 mt-20 mx-auto flex justify-center items-center">
             {/* eslint-disable-next-line jsx-a11y/alt-text, @next/next/no-img-element */}
-            <img src="/images/scroll.gif" alt="scroll" width={20} height={20}/>
+            <img src="/images/scroll.gif" alt="scroll" width={20} height={20} />
           </section>
         </>
       ) : (

@@ -57,7 +57,7 @@ const About = ({ images }: { images: Array<string> }) => {
         })}
       </section>
       <div className="absolute xl:flex xl:flex-row md:flex-col justify-center items-center self-center xl:space-x-14 md:space-y-10 aboutDiv">
-        <section className="px-5 rounded-2xl shadow-xl xl:h-[65vh] xl:w-[70vw] lg:h-[59vh]">
+        <section className="px-5 rounded-2xl shadow-xl xl:h-[65vh] xl:w-[70vw] lg:h-[59vh] lg:w-[80vw]">
           {/* @ts-ignore */}
           <Typography
             as="h1"
@@ -85,6 +85,7 @@ const About = ({ images }: { images: Array<string> }) => {
                     alt={skill.skill_name}
                     width={skill.width}
                     height={skill.height}
+                    className="xl:w-10 lg:w-8"
                   />
                 </div>
               );
@@ -110,6 +111,7 @@ const About = ({ images }: { images: Array<string> }) => {
                     alt={skill.skill_name}
                     width={skill.width}
                     height={skill.height}
+                    className="xl:w-10 lg:w-8"
                   />
                 </div>
               );
@@ -135,6 +137,7 @@ const About = ({ images }: { images: Array<string> }) => {
                     alt={skill.skill_name}
                     width={skill.width}
                     height={skill.height}
+                    className="xl:w-10 lg:w-8"
                   />
                 </div>
               );
@@ -160,6 +163,7 @@ const About = ({ images }: { images: Array<string> }) => {
                     alt={skill.skill_name}
                     width={skill.width}
                     height={skill.height}
+                    className="xl:w-10 lg:w-8"
                   />
                 </div>
               );
